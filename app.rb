@@ -9,26 +9,21 @@ include FileUtils::Verbose
 tarot= TarotDeck.new
 store= JournalStore.new
 
-    get('/tarot/:id') do
-        @datecheck= DateCheck.new
-        @datecheck= tarot.check
+    get('/tarot/:count') do
         time= Time.new
-        if @datecheck.date == time.strftime("%a %b %d")
-            @journal= store.all
-            erb :index
-        else
-            @tarotdeck= tarot.all
-            @tarotdeck.pop
-            @tarotdeck= @tarotdeck.shuffle
-            @entry= Entry.new
-            @entry.date= time.strftime("%A, %B %d %Y - %I:%M%p")
-            store.getid(@entry)
-            @entry.tarot=[]
-            @entry.tarotlog= []
-            deals= params['id'].to_i
-            @deal=[]
-            deals.times{@deal<<@tarotdeck.pop}
-            @deal.each do |dealt|
+        @datecheck= DateCheck.new
+        @entry= Entry.new
+        @tarotdeck= tarot.all
+        @tarotdeck.pop
+        @tarotdeck= @tarotdeck.shuffle
+        @entry.date= time.strftime("%A, %B %d %Y - %I:%M%p")
+        store.getid(@entry)
+        @entry.tarot=[]
+        @entry.tarotlog= []
+        deals= params['count'].to_i
+        @deal=[]
+        deals.times{@deal<<@tarotdeck.pop}
+        @deal.each do |dealt|
             dealt.inverted= dorandom
             if dealt.inverted== "Inverted"
                 @entry.tarotlog+= ["<div class='tooltip'>#{dealt.title} Inverted<span class='tooltiptext'>#{dealt.inverted_meaning}</span></div>"]
@@ -38,10 +33,21 @@ store= JournalStore.new
             end
             @entry.tarot+= ["#{dealt.id}#{dealt.inverted}"]
         end
-        store.save(@entry)
-        @datecheck.date= time.strftime("%a %b %d")
+        store.save(@entry)    
+        @datecheck.date = time.strftime("%a %b %d")
         tarot.save(@datecheck)
         erb :tarot, :layout => :tarotbg
+    end
+
+    get('/choose') do
+        @datecheck= DateCheck.new
+        @datecheck= tarot.check
+        time= Time.new
+        if @datecheck.date == time.strftime("%a %b %d")
+            @journal= store.all
+            erb :index
+        else
+            erb :choose, :layout => :tarotbg
         end
     end
 
@@ -159,7 +165,7 @@ store= JournalStore.new
         redirect '/refresh'
     end
 
-    post('/tarot/:id') do
+    post('/tarot/comment/:id') do
         @entry= Entry.new
         id= params['id'].to_i
         @entry= store.find(id)

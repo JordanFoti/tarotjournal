@@ -1,28 +1,26 @@
 
     <center>
     <h1>Tarot Card Dealer</h1>
-    </center>
-    <center>
     <table class="a">
     <tr>
-    <% @entry.tarot.each do |card|%>
-            <td>
-            <center><button class="button" onclick="location.href='/view/<%= card%>,<%= @entry.id%>'" type=button><img src="/images/<%= card%>.jpg"></button></center>
-            </td>
-            <% end %>
-            </tr>
-            <tr>
-            <% @entry.tarotlog.each do |meaning|%>
-            <td>
-            <center>
-            <%= meaning%>
-            </center>
-            </td>
-            <% end%>
+    <% @entry.tarot.each do |id|%>
+        <td>
+        <center><button class="button" onclick="location.href='/view/<%= id%>,<%= @entry.id%>'" type=button><img src="/images/<%= id%>.jpg"></button></center>
+        </td>
+    <% end %>
+        </tr>
+        <tr>
+    <% @entry.tarotlog.each do |meaning|%>
+        <td>
+        <center>
+        <%= meaning%>
+        </center>
+        </td>
+    <% end%>
     </tr>
     </table>
-        <form action='/tarot/<%= @entry.id%>' enctype="multipart/form-data" method='POST'> 
-        <textarea rows=10 cols=80 name="log"/></textarea>
+        <form action='/tarot/comment/<%= @entry.id%>' enctype="multipart/form-data" method='POST'> 
+        <textarea rows=10 cols=80 name="log"></textarea>
         <br>
         <input type="Submit" value="Add My Thoughts" />
         </form>
