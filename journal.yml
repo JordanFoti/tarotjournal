@@ -1,6 +1,13 @@
 ---
 1: !ruby/object:Entry
   date: Friday, November 19 2021 - 08:14PM
-  log: This is an app that lets you save daily tarot draws and make journal entries. Any photos will be resized to 800x600 and all youtube links will become embedded videos. Please Enjoy.
+  log: This is an app that lets you save daily tarot draws and make journal entries.
+    Any photos will be resized to 800x600 and all youtube links will become embedded
+    videos. Please Enjoy.
   id: 1
   image:
+2: !ruby/object:Entry
+  date: Sunday, December 05 2021 - 01:30PM
+  log: ''
+  id: 2
+  image: 50Inverted.jpg
