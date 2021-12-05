@@ -9,7 +9,6 @@ include FileUtils::Verbose
 tarot= TarotDeck.new
 store= JournalStore.new
 
-
     get('/tarot') do
         @datecheck= DateCheck.new
         @datecheck= tarot.check
@@ -23,7 +22,6 @@ store= JournalStore.new
             @tarotdeck= @tarotdeck.shuffle
             @entry= Entry.new
             @entry.date= time.strftime("%A, %B %d %Y - %I:%M%p")
-            @deal=Hash.new
             store.getid(@entry)
             @entry.tarot=[]
             @entry.tarotlog= []
