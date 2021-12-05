@@ -4,4 +4,4 @@ It's my first sinatra project, i'm still learning. To launch navigate your termi
 
 ruby -I lib app.rb
 
-then navigate your browser to http://localhost:4567/tarot
+then navigate your browser to http://localhost:4567/

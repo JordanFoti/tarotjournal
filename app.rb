@@ -79,6 +79,11 @@ store= JournalStore.new
         erb :index
     end
 
+    get('/') do
+        @journal= store.all
+        erb :index
+    end
+
 
     get('/journal/new') do
         erb :new
