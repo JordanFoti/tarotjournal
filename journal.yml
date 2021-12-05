@@ -1,0 +1,9 @@
+---
+1: !ruby/object:Entry
+  date: Sunday, December 05 2021 - 02:15PM
+  log: 'This is my tarot journal. It allows you to get a daily tarot draw which is
+    saved to the journal. It also lets you make journal entries, upload photos, and
+    embed youtube videos. All pictures will be resized to 800x600 at the appropriate
+    orientation unless they''re smaller than that, and youtube links will automatically
+    embed the video when posted. '
+  id: 1
