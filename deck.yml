@@ -165,7 +165,7 @@
   suit: Swords
   meaning: Conflict, Disagreement, Pyrrhic Victory
   inverted_meaning: Reconciliation, Making Amends
-  inverted: Inverted
+  inverted:
   id: 21
 22: !ruby/object:TarotCard
   value: 6
@@ -173,7 +173,7 @@
   suit: Swords
   meaning: Transition. Rite of Passage
   inverted_meaning: Resisting Change, Unfinished Business
-  inverted: Inverted
+  inverted:
   id: 22
 23: !ruby/object:TarotCard
   value: 7
@@ -181,7 +181,7 @@
   suit: Swords
   meaning: Betrayal, Deception, Strategy
   inverted_meaning: Imposter Syndrome, Keeping Secrets, Deceit
-  inverted: Inverted
+  inverted:
   id: 23
 24: !ruby/object:TarotCard
   value: 8
@@ -189,7 +189,7 @@
   suit: Swords
   meaning: Self-Imprisonment, Negativity, Victim Mentality
   inverted_meaning: Self critiqueing, Open to new Ideas
-  inverted: Inverted
+  inverted:
   id: 24
 25: !ruby/object:TarotCard
   value: 9
@@ -397,7 +397,7 @@
   suit: Wands
   meaning: Success, Public Recognition, Self-Confidence
   inverted_meaning: Personal Success, Fall From Grace, Egotism
-  inverted: Inverted
+  inverted:
   id: 50
 51: !ruby/object:TarotCard
   value: 7
@@ -477,7 +477,7 @@
   suit: Major Arcana
   meaning: Sacred Feminine, Divine Understanding, Intuition
   inverted_meaning: Secrets, Silence and Darkness, Non-Intuitive
-  inverted: Inverted
+  inverted:
   id: 60
 61: !ruby/object:TarotCard
   value: 3
@@ -517,7 +517,7 @@
   suit: Major Arcana
   meaning: Willpower, Success, Determination
   inverted_meaning: Self-Discipline, Opposition, Lack of Direction
-  inverted: Inverted
+  inverted:
   id: 65
 66: !ruby/object:TarotCard
   value: 8
@@ -525,7 +525,7 @@
   suit: Major Arcana
   meaning: Fortitude, Influence, Compassion
   inverted_meaning: Self Doubt, Low Energy, Raw Emotion
-  inverted: Inverted
+  inverted:
   id: 66
 67: !ruby/object:TarotCard
   value: 9
@@ -573,7 +573,7 @@
   suit: Major Arcana
   meaning: Balance, Moderation, Purpose
   inverted_meaning: Imbalance, Excess, Re-alignment
-  inverted: Inverted
+  inverted:
   id: 72
 73: !ruby/object:TarotCard
   value: 16
@@ -581,7 +581,7 @@
   suit: Major Arcana
   meaning: Sudden Change, Upheaval, Chaos, Awakening
   inverted_meaning: Averting Disaster, Personal Transformation, Refusing Change
-  inverted: Inverted
+  inverted:
   id: 73
 74: !ruby/object:TarotCard
   value: 17
@@ -613,7 +613,7 @@
   suit: Major Arcana
   meaning: Judgement, Rebirth, Absolution
   inverted_meaning: Self Doubt, Ignoring the Call
-  inverted: Inverted
+  inverted:
   id: 77
 78: !ruby/object:TarotCard
   value: 21
