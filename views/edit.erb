@@ -1,0 +1,24 @@
+
+    <blockquote>
+        <h2>Edit Entry <%= @entry.date %></h2504>
+        <center>
+        <form action='/edit/<%= @entry.id %>'  enctype="multipart/form-data" method='POST'> 
+        <textarea rows=10 cols=80 name="log"><%= @entry.log%></textarea>
+        </center>
+        </blockquote>
+        <center>
+        <table>
+        <tr>
+        <td>
+        <input name="file" type="file" />
+        </td>
+        <td>
+        <input type="Submit" value="Post to Journal" />
+        </form>
+        </td>
+        <td>
+        <button class="button" onclick="location.href='/journal#<%= @entry.id%>'" type=button>Return to Journal</button>
+        </td>
+        </table>
+        </center>
+

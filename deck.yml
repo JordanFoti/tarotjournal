@@ -1,0 +1,627 @@
+---
+1: !ruby/object:TarotCard
+  value: 0
+  title: The Fool
+  suit: Major Arcana
+  meaning: New Beginnings, Being Spontaneous and Easy Going
+  inverted_meaning: Holding Back or Reckless Risk-taking
+  inverted:
+  id: 1
+2: !ruby/object:TarotCard
+  value: 15
+  title: The Devil
+  suit: Major Arcana
+  meaning: Sexualty, Addiction, Attachment, Restriction
+  inverted_meaning: Freedom from taboo, Reflecting on Darkness, Detachment
+  inverted: Inverted
+  id: 2
+3: !ruby/object:TarotCard
+  value: 1
+  title: Ace of Cups
+  suit: Cups
+  meaning: New Love, Compassion, Creativity
+  inverted_meaning: Self-love, Intuition, Repressed Emotions
+  inverted:
+  id: 3
+4: !ruby/object:TarotCard
+  value: 2
+  title: Two of Cups
+  suit: Cups
+  meaning: Mutual Attraction, Unifying Love, Partnerships
+  inverted_meaning: Disharmony, Distrust, Breakups
+  inverted:
+  id: 4
+5: !ruby/object:TarotCard
+  value: 3
+  title: Three of Cups
+  suit: Cups
+  meaning: Celebrating Friendship, Positive Collaborations
+  inverted_meaning: Being Alone, Overt Celebration, Third Wheel
+  inverted:
+  id: 5
+6: !ruby/object:TarotCard
+  value: 4
+  title: Four of Cups
+  suit: Cups
+  meaning: Meditation, Apathy, Contemplation
+  inverted_meaning: Retreat, Withdrawl, Re-alignment
+  inverted:
+  id: 6
+7: !ruby/object:TarotCard
+  value: 5
+  title: Five of Cups
+  suit: Cups
+  meaning: Regret, Failure, Disappointment, Pessimism
+  inverted_meaning: Personal Setbacks, Self Forgiveness, Moving On
+  inverted:
+  id: 7
+8: !ruby/object:TarotCard
+  value: 6
+  title: Six of Cups
+  suit: Cups
+  meaning: Revisiting the past, Childhood Innocence, Joy
+  inverted_meaning: Living in the Past, Needing Forgiveness
+  inverted:
+  id: 8
+9: !ruby/object:TarotCard
+  value: 7
+  title: Seven of Cups
+  suit: Cups
+  meaning: Opportunities, Choices, Wishful Thinking, Illusions
+  inverted_meaning: Personal Values, Too Many Choices
+  inverted:
+  id: 9
+10: !ruby/object:TarotCard
+  value: 8
+  title: Eight of Cups
+  suit: Cups
+  meaning: Escapism, Disappointment, Withdrawal
+  inverted_meaning: Aimless Drifting, One Last Chance
+  inverted:
+  id: 10
+11: !ruby/object:TarotCard
+  value: 9
+  title: Nine of Cups
+  suit: Cups
+  meaning: Contentment, Satisfaction, Gratitude
+  inverted_meaning: Materialism, Dissatisfaction, Indulgence
+  inverted:
+  id: 11
+12: !ruby/object:TarotCard
+  value: 10
+  title: Ten of Cups
+  suit: Cups
+  meaning: Divine Love, Harmony, Blissful Relationships
+  inverted_meaning: Misalignment, Struggling Relationships, Isolation
+  inverted:
+  id: 12
+13: !ruby/object:TarotCard
+  value: 11
+  title: Page of Cups
+  suit: Cups
+  meaning: Curiosity, Intuitive Messages, Creative Potential
+  inverted_meaning: Creative Blocks, Emotional Immaturity, Confrontation
+  inverted:
+  id: 13
+14: !ruby/object:TarotCard
+  value: 12
+  title: Knight of Cups
+  suit: Cups
+  meaning: Charm, Imagination, Romance
+  inverted_meaning: Unrealistic Fantasies, Moodiness, Jealousy
+  inverted:
+  id: 14
+15: !ruby/object:TarotCard
+  value: 13
+  title: Queen of Cups
+  suit: Cups
+  meaning: In Tune, Stable, Caring
+  inverted_meaning: Self-Care, Codependency, Inner Monologue
+  inverted:
+  id: 15
+16: !ruby/object:TarotCard
+  value: 14
+  title: King of Cups
+  suit: Cups
+  meaning: Balanced, Diplomatic, Compassionate
+  inverted_meaning: Selfishness, Emotional Manipulation, Inner Turmoil
+  inverted:
+  id: 16
+17: !ruby/object:TarotCard
+  value: 1
+  title: Ace of Swords
+  suit: Swords
+  meaning: Breakthroughs, Clarity, New Solutions
+  inverted_meaning: Second Thoughts, Clouded Judgement
+  inverted:
+  id: 17
+18: !ruby/object:TarotCard
+  value: 2
+  title: Two of Swords
+  suit: Swords
+  meaning: Difficult Decisions, An Impasse
+  inverted_meaning: Confusion, Stalemate, Information Overload
+  inverted:
+  id: 18
+19: !ruby/object:TarotCard
+  value: 3
+  title: Three of Swords
+  suit: Swords
+  meaning: Heartbreak, Emotional Pain, Grief
+  inverted_meaning: Negative Self-Worth, Optimism, Forgiveness
+  inverted:
+  id: 19
+20: !ruby/object:TarotCard
+  value: 4
+  title: Four of Swords
+  suit: Swords
+  meaning: Rest, Relaxation, Recuperation
+  inverted_meaning: Exhaustion, Burnout, Stagnation
+  inverted:
+  id: 20
+21: !ruby/object:TarotCard
+  value: 5
+  title: Five of Swords
+  suit: Swords
+  meaning: Conflict, Disagreement, Pyrrhic Victory
+  inverted_meaning: Reconciliation, Making Amends
+  inverted: Inverted
+  id: 21
+22: !ruby/object:TarotCard
+  value: 6
+  title: Six of Swords
+  suit: Swords
+  meaning: Transition. Rite of Passage
+  inverted_meaning: Resisting Change, Unfinished Business
+  inverted: Inverted
+  id: 22
+23: !ruby/object:TarotCard
+  value: 7
+  title: Seven of Swords
+  suit: Swords
+  meaning: Betrayal, Deception, Strategy
+  inverted_meaning: Imposter Syndrome, Keeping Secrets, Deceit
+  inverted: Inverted
+  id: 23
+24: !ruby/object:TarotCard
+  value: 8
+  title: Eight of Swords
+  suit: Swords
+  meaning: Self-Imprisonment, Negativity, Victim Mentality
+  inverted_meaning: Self critiqueing, Open to new Ideas
+  inverted: Inverted
+  id: 24
+25: !ruby/object:TarotCard
+  value: 9
+  title: Nine of Swords
+  suit: Swords
+  meaning: Anxiety, Fear, Nightmares
+  inverted_meaning: Deep Fears, Secrets, Release from Worry
+  inverted:
+  id: 25
+26: !ruby/object:TarotCard
+  value: 10
+  title: Ten of Swords
+  suit: Swords
+  meaning: Painful Endings, Deep Wounds, Crisis
+  inverted_meaning: Recovery, Regeneration, Refusing to Lose
+  inverted:
+  id: 26
+27: !ruby/object:TarotCard
+  value: 11
+  title: Page of Swords
+  suit: Swords
+  meaning: Curiosity, New Forms of Communication, Novelty
+  inverted_meaning: All Talk and No Action, Thoughtless Haste
+  inverted:
+  id: 27
+28: !ruby/object:TarotCard
+  value: 12
+  title: Knight of Swords
+  suit: Swords
+  meaning: Ambitious, Action-Oriented, Successful
+  inverted_meaning: Impulsive, Restless, Burn-Out
+  inverted:
+  id: 28
+29: !ruby/object:TarotCard
+  value: 13
+  title: Queen of Swords
+  suit: Swords
+  meaning: Unbiased, Clearheaded, Direct
+  inverted_meaning: Emotional, Bitchy, Cold-Hearted
+  inverted:
+  id: 29
+30: !ruby/object:TarotCard
+  value: 14
+  title: King of Swords
+  suit: Swords
+  meaning: Intellectual Power, Authority, Truth
+  inverted_meaning: Muted Power, Misuse of Power, Manipulation
+  inverted:
+  id: 30
+31: !ruby/object:TarotCard
+  value: 1
+  title: Ace of Pentacles
+  suit: Pentacles
+  meaning: A New Job, Abundance, Manifestation
+  inverted_meaning: Missed Opportunity, Poor Planning, Lack of Insight
+  inverted:
+  id: 31
+32: !ruby/object:TarotCard
+  value: 2
+  title: Two of Pentacles
+  suit: Pentacles
+  meaning: Multiple Priorities, Time Management, Adaptability
+  inverted_meaning: Disorganized, Over-Committed
+  inverted:
+  id: 32
+33: !ruby/object:TarotCard
+  value: 3
+  title: Three of Pentacles
+  suit: Pentacles
+  meaning: Teamwork, Collaboration, Learning
+  inverted_meaning: Disharmony, Working Alone
+  inverted:
+  id: 33
+34: !ruby/object:TarotCard
+  value: 4
+  title: Four of Pentacles
+  suit: Pentacles
+  meaning: Saving Money, Scarcity, Control
+  inverted_meaning: Over-spending, Greed, Self-Protection
+  inverted:
+  id: 34
+35: !ruby/object:TarotCard
+  value: 5
+  title: Five of Pentacles
+  suit: Pentacles
+  meaning: Financial Loss, Poverty, Isolation
+  inverted_meaning: Recovery from Financial Loss, Spiritual Poverty
+  inverted:
+  id: 35
+36: !ruby/object:TarotCard
+  value: 6
+  title: Six of Pentacles
+  suit: Pentacles
+  meaning: Giving, Sharing, Generosity, Charity
+  inverted_meaning: Selfishness, Unpaid Debts
+  inverted:
+  id: 36
+37: !ruby/object:TarotCard
+  value: 7
+  title: Seven of Pentacles
+  suit: Pentacles
+  meaning: Long Term Goals, Sustainability, Investments
+  inverted_meaning: No Long Term Goals, Limited Potential
+  inverted:
+  id: 37
+38: !ruby/object:TarotCard
+  value: 8
+  title: Eight of Pentacles
+  suit: Pentacles
+  meaning: Apprenticeship, Development, Mastery
+  inverted_meaning: Self-Improvement, Perfectionism, Misdirection
+  inverted:
+  id: 38
+39: !ruby/object:TarotCard
+  value: 9
+  title: Nine of Pentacles
+  suit: Pentacles
+  meaning: Abundance, Self-Sufficiency, Luxury
+  inverted_meaning: Low self-worth, Over Working, Hustling
+  inverted:
+  id: 39
+40: !ruby/object:TarotCard
+  value: 10
+  title: Ten of Pentacles
+  suit: Pentacles
+  meaning: Financial Security, Family, Success
+  inverted_meaning: Darkness, Failure, Loss
+  inverted:
+  id: 40
+41: !ruby/object:TarotCard
+  value: 11
+  title: Page of Pentacles
+  suit: Pentacles
+  meaning: Manifestation, Opportunities, Development
+  inverted_meaning: Procrastination, Learning from Failure
+  inverted:
+  id: 41
+42: !ruby/object:TarotCard
+  value: 12
+  title: Knight of Pentacles
+  suit: Pentacles
+  meaning: Hard Work, Productivity, Routine
+  inverted_meaning: Self-Discipline, Boredom, Feeling Stuck
+  inverted:
+  id: 42
+43: !ruby/object:TarotCard
+  value: 13
+  title: Queen of Pentacles
+  suit: Pentacles
+  meaning: Nurturing, Practical, Providing
+  inverted_meaning: Financially Independent, Work-Home Conflict
+  inverted:
+  id: 43
+44: !ruby/object:TarotCard
+  value: 14
+  title: King of Pentacles
+  suit: Pentacles
+  meaning: Wealth, Leadership, Security
+  inverted_meaning: Obsessed with Status, Stubborn, Spendthrift
+  inverted:
+  id: 44
+45: !ruby/object:TarotCard
+  value: 1
+  title: Ace of Wands
+  suit: Wands
+  meaning: Inspiration, Growth, Potential
+  inverted_meaning: Lack of Direction, Distractions, Delays
+  inverted:
+  id: 45
+46: !ruby/object:TarotCard
+  value: 2
+  title: Two of Wands
+  suit: Wands
+  meaning: Progress, Discovery, Future Planning
+  inverted_meaning: Personal Goals, Fear of the Unknown, Lack of Planning
+  inverted:
+  id: 46
+47: !ruby/object:TarotCard
+  value: 3
+  title: Three of Wands
+  suit: Wands
+  meaning: Progress, Expansion, Foresight
+  inverted_meaning: Playing Small Stakes, Lack of Foresight
+  inverted:
+  id: 47
+48: !ruby/object:TarotCard
+  value: 4
+  title: Four of Wands
+  suit: Wands
+  meaning: Celebration, Joy, Homecoming
+  inverted_meaning: Inner Harmony, Conflict with Others, Transition
+  inverted:
+  id: 48
+49: !ruby/object:TarotCard
+  value: 5
+  title: Five of Wands
+  suit: Wands
+  meaning: Competition, Disagreement, Tension
+  inverted_meaning: Conflict Avoidance, Tension Release
+  inverted:
+  id: 49
+50: !ruby/object:TarotCard
+  value: 6
+  title: Six of Wands
+  suit: Wands
+  meaning: Success, Public Recognition, Self-Confidence
+  inverted_meaning: Personal Success, Fall From Grace, Egotism
+  inverted: Inverted
+  id: 50
+51: !ruby/object:TarotCard
+  value: 7
+  title: Seven of Wands
+  suit: Wands
+  meaning: Challenge, Perserverance, Protection
+  inverted_meaning: Exhaustion, Giving Up, Overwhelmed
+  inverted:
+  id: 51
+52: !ruby/object:TarotCard
+  value: 8
+  title: Eight of Wands
+  suit: Wands
+  meaning: Movement, Action, Swift Change
+  inverted_meaning: Delays, Frustration, Resistance
+  inverted:
+  id: 52
+53: !ruby/object:TarotCard
+  value: 9
+  title: Nine of Wands
+  suit: Wands
+  meaning: Courage, Persistence, A Test of Faith
+  inverted_meaning: Inner Struggle, Overwhelmed, Paranoia
+  inverted:
+  id: 53
+54: !ruby/object:TarotCard
+  value: 10
+  title: Ten of Wands
+  suit: Wands
+  meaning: Hard Work, Extra Responsibilities, Burden
+  inverted_meaning: Doing it All, Carrying the Load, Delegating Responsibility
+  inverted:
+  id: 54
+55: !ruby/object:TarotCard
+  value: 11
+  title: Page of Wands
+  suit: Wands
+  meaning: Inspiring Ideas, Discovery, Limitless Potential
+  inverted_meaning: New Ideas, Self-Limiting Beliefs, A Spiritual Journey
+  inverted:
+  id: 55
+56: !ruby/object:TarotCard
+  value: 12
+  title: Knight of Wands
+  suit: Wands
+  meaning: Energy, Adventure, Impulsiveness
+  inverted_meaning: Passion Project, Scattered Resources, Frustrating Vision
+  inverted:
+  id: 56
+57: !ruby/object:TarotCard
+  value: 13
+  title: Queen of Wands
+  suit: Wands
+  meaning: Confidence, Independence, Social Butterfly
+  inverted_meaning: Self-Respect, Finding Yourself, Introverted
+  inverted:
+  id: 57
+58: !ruby/object:TarotCard
+  value: 14
+  title: King of Wands
+  suit: Wands
+  meaning: Natural Leader, Honour, Entrepeneur
+  inverted_meaning: Impulsive, Ruthless, Hard to Please
+  inverted:
+  id: 58
+59: !ruby/object:TarotCard
+  value: 1
+  title: The Magician
+  suit: Major Arcana
+  meaning: Manifestation, Power, Inspiration
+  inverted_meaning: Manipulation, Poor Planning, Untapped Talents
+  inverted:
+  id: 59
+60: !ruby/object:TarotCard
+  value: 2
+  title: The High Priestess
+  suit: Major Arcana
+  meaning: Sacred Feminine, Divine Understanding, Intuition
+  inverted_meaning: Secrets, Silence and Darkness, Non-Intuitive
+  inverted: Inverted
+  id: 60
+61: !ruby/object:TarotCard
+  value: 3
+  title: The Empress
+  suit: Major Arcana
+  meaning: Femininity, Beauty, Abudance
+  inverted_meaning: Creative Blocks, Codependence
+  inverted:
+  id: 61
+62: !ruby/object:TarotCard
+  value: 4
+  title: The Emperor
+  suit: Major Arcana
+  meaning: Authority, Establishment, Structure
+  inverted_meaning: Domination, Overreach, Lack of Discipline
+  inverted:
+  id: 62
+63: !ruby/object:TarotCard
+  value: 5
+  title: The Heirophant
+  suit: Major Arcana
+  meaning: Spiritual Wisdom, Religious Beliefs, Conformity
+  inverted_meaning: Personal Beliefs, Freedom, Challenging the Status Quo
+  inverted:
+  id: 63
+64: !ruby/object:TarotCard
+  value: 6
+  title: The Lovers
+  suit: Major Arcana
+  meaning: Love, Harmony, Choices
+  inverted_meaning: Self-Love, Disharmony, Imbalance
+  inverted:
+  id: 64
+65: !ruby/object:TarotCard
+  value: 7
+  title: The Chariot
+  suit: Major Arcana
+  meaning: Willpower, Success, Determination
+  inverted_meaning: Self-Discipline, Opposition, Lack of Direction
+  inverted: Inverted
+  id: 65
+66: !ruby/object:TarotCard
+  value: 8
+  title: Strength
+  suit: Major Arcana
+  meaning: Fortitude, Influence, Compassion
+  inverted_meaning: Self Doubt, Low Energy, Raw Emotion
+  inverted: Inverted
+  id: 66
+67: !ruby/object:TarotCard
+  value: 9
+  title: The Hermit
+  suit: Major Arcana
+  meaning: Soul Searching, Introspection, Solitude
+  inverted_meaning: Isolation, Lonliness, Withdrawal
+  inverted:
+  id: 67
+68: !ruby/object:TarotCard
+  value: 10
+  title: Wheel of Fortune
+  suit: Major Arcana
+  meaning: Good Luck, Karma, Destiny, A Turning Point
+  inverted_meaning: Bad Luck, Resistance to Change, Breaking a Cycle
+  inverted:
+  id: 68
+69: !ruby/object:TarotCard
+  value: 11
+  title: Justice
+  suit: Major Arcana
+  meaning: Fairness, Truth, Law
+  inverted_meaning: Unfairness, Lack of Accountability, Unfairness
+  inverted:
+  id: 69
+70: !ruby/object:TarotCard
+  value: 12
+  title: The Hanged Man
+  suit: Major Arcana
+  meaning: Pause, Surrender, Letting Go
+  inverted_meaning: Delays, Stalling, Indecision
+  inverted:
+  id: 70
+71: !ruby/object:TarotCard
+  value: 13
+  title: Death
+  suit: Major Arcana
+  meaning: Endings, Transformations, Change
+  inverted_meaning: Personal Change, Inner Purging
+  inverted:
+  id: 71
+72: !ruby/object:TarotCard
+  value: 14
+  title: Temperance
+  suit: Major Arcana
+  meaning: Balance, Moderation, Purpose
+  inverted_meaning: Imbalance, Excess, Re-alignment
+  inverted: Inverted
+  id: 72
+73: !ruby/object:TarotCard
+  value: 16
+  title: The Tower
+  suit: Major Arcana
+  meaning: Sudden Change, Upheaval, Chaos, Awakening
+  inverted_meaning: Averting Disaster, Personal Transformation, Refusing Change
+  inverted:
+  id: 73
+74: !ruby/object:TarotCard
+  value: 17
+  title: The Star
+  suit: Major Arcana
+  meaning: Hope, Faith, Purpose
+  inverted_meaning: Lack of Faith, Despair, Disconnection
+  inverted:
+  id: 74
+75: !ruby/object:TarotCard
+  value: 18
+  title: The Moon
+  suit: Major Arcana
+  meaning: Illusion, Self-Conscious, Intuition
+  inverted_meaning: Release of Fear, Repressed Emotions, Inner Confusion
+  inverted:
+  id: 75
+76: !ruby/object:TarotCard
+  value: 19
+  title: The Sun
+  suit: Major Arcana
+  meaning: Positivity, Warmth, Vitality
+  inverted_meaning: Inner Child, Feeling Down, Overly Optimistic
+  inverted:
+  id: 76
+77: !ruby/object:TarotCard
+  value: 20
+  title: Judgement
+  suit: Major Arcana
+  meaning: Judgement, Rebirth, Absolution
+  inverted_meaning: Self Doubt, Ignoring the Call
+  inverted: Inverted
+  id: 77
+78: !ruby/object:TarotCard
+  value: 21
+  title: The World
+  suit: Major Arcana
+  meaning: Completion, Accomplishment, Travel
+  inverted_meaning: Seeking Personal Closure, Short-Cuts, Delays
+  inverted:
+  id: 78
+79: !ruby/object:DateCheck
+  date:

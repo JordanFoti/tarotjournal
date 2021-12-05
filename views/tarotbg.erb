@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>Draw Three Cards</title>
+<style type="text/css">
+.tooltip {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    }
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    }
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    font-weight: normal;
+    }
+blockquote{    
+    background-color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid black;
+    padding: 5px 45px 5px 5px;
+    font-family: Helvetica;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    }
+        blockquote{    
+            background-color: grey;
+            margin-left: 5%;
+            margin-right: 5%;
+            color: white;
+            border: 1px solid black;
+            padding: 5px 5px 5px 5px;
+            font-family: Helvetica;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            }
+        body{
+            background-color: maroon;
+            margin-left: 10%;
+            margin-right: 10%;
+            color: white;
+            font-family: Helvetica;
+            font-size: 24px;
+            }     
+        a:link {
+            color: grey; 
+            background-color: transparent; 
+            font-weight: bold;
+            text-decoration: none;
+    1            }
+        a:visited {
+            color: grey;
+            background-color: transparent;
+            font-weight: bold;
+            text-decoration: none;
+            }
+        h1{
+            color: white;
+            text-shadow:
+            -1px -1px 0 #000,  
+            -1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+        h2{
+            color: grey;
+            text-shadow:
+            -1px -1px 0 #000,  
+            -1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+        input {
+            word-wrap: break-word;
+            word-break: break-word;
+            font-size:18px;
+            color: white;
+            background-color: grey;
+            }
+        button{
+            font-size:18px;
+            color: white;
+            background-color: grey;
+            }
+        textarea{ 
+            font-size: 18px; 
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            }
+        table th,td{
+            margin-left: auto;
+            margin-right:auto;
+            }
+        table.a{
+            table-layout: fixed ; 
+            width: 750px;
+            }    
+    </style>
+</head>
+<body>
+<%= yield %>
+</body>
+</html>

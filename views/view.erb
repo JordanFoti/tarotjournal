@@ -1,0 +1,26 @@
+
+<blockquote>
+    <center>
+    <table>
+    <tr>
+    <td>
+    <% if @tarotcard.inverted== "Inverted" %>
+    <img src="../images/<%= @tarotcard.id%>Inverted.jpg">
+    <% else %>
+    <img src="../images/<%= @tarotcard.id%>.jpg">
+    <% end %>
+    </td>
+    <td>          
+    <center>
+    <h1><%= @tarotcard.title %></h1>
+    <h3><%= @tarotcard.meaning%></h3>
+    <h4><%= @tarotcard.inverted_meaning%></h4>
+    </center>
+    </td>
+    </tr>
+    </table>
+    </center>
+</blockquote>
+<center>
+<button class="button" onclick="location.href='/journal#<%= @id%>'" type=button>Return to Journal</button>
+</center>
