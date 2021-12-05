@@ -581,7 +581,7 @@
   suit: Major Arcana
   meaning: Sudden Change, Upheaval, Chaos, Awakening
   inverted_meaning: Averting Disaster, Personal Transformation, Refusing Change
-  inverted:
+  inverted: Inverted
   id: 73
 74: !ruby/object:TarotCard
   value: 17
@@ -624,4 +624,4 @@
   inverted:
   id: 78
 79: !ruby/object:DateCheck
-  date:
+  date: Sun Dec 05

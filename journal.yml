@@ -6,3 +6,17 @@
     videos. Please Enjoy.
   id: 1
   image:
+2: !ruby/object:Entry
+  date: Sunday, December 05 2021 - 01:46PM
+  id: 2
+  tarot:
+  - '44'
+  - '55'
+  - 73Inverted
+  tarotlog:
+  - "<div class='tooltip'>King of Pentacles<span class='tooltiptext'>Wealth, Leadership,
+    Security</span></div>"
+  - "<div class='tooltip'>Page of Wands<span class='tooltiptext'>Inspiring Ideas,
+    Discovery, Limitless Potential</span></div>"
+  - "<div class='tooltip'>The Tower Inverted<span class='tooltiptext'>Averting Disaster,
+    Personal Transformation, Refusing Change</span></div>"
