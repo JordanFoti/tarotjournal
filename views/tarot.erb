@@ -5,32 +5,20 @@
     <center>
     <table class="a">
     <tr>
-    <td>
-    <center><button class="button" onclick="location.href='/view/<%=@entry.tarot[0]%>,<%=@entry.id%>'" type=button><img src="/images/<%=@entry.tarot[0]%>.jpg"></button></center>
-    </td>
-    <td>
-    <center><button class="button" onclick="location.href='/view/<%=@entry.tarot[1]%>,<%=@entry.id%>'" type=button><img src="/images/<%=@entry.tarot[1]%>.jpg"></button></center>
-    </td>
-    <td>
-    <center><button class="button" onclick="location.href='/view/<%=@entry.tarot[2]%>,<%=@entry.id%>'" type=button><img src="/images/<%=@entry.tarot[2]%>.jpg"></button></center>
-    </td>
-    </tr>
-    <tr>
-    <td>
-    <center>
-    <%=@entry.tarotlog[0]%>
-    </center>
-    </td>
-    <td>
-    <center>
-    <%=@entry.tarotlog[1]%>
-    </center>
-    </td>            
-    <td>
-    <center>
-    <%=@entry.tarotlog[2]%>
-    </center>
-    </td>
+    <% @entry.tarot.each do |card|%>
+            <td>
+            <center><button class="button" onclick="location.href='/view/<%= card%>,<%= @entry.id%>'" type=button><img src="/images/<%= card%>.jpg"></button></center>
+            </td>
+            <% end %>
+            </tr>
+            <tr>
+            <% @entry.tarotlog.each do |meaning|%>
+            <td>
+            <center>
+            <%= meaning%>
+            </center>
+            </td>
+            <% end%>
     </tr>
     </table>
         <form action='/tarot/<%= @entry.id%>' enctype="multipart/form-data" method='POST'> 

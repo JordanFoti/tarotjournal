@@ -9,7 +9,7 @@ include FileUtils::Verbose
 tarot= TarotDeck.new
 store= JournalStore.new
 
-    get('/tarot') do
+    get('/tarot/:id') do
         @datecheck= DateCheck.new
         @datecheck= tarot.check
         time= Time.new
@@ -25,8 +25,9 @@ store= JournalStore.new
             store.getid(@entry)
             @entry.tarot=[]
             @entry.tarotlog= []
+            deals= params['id'].to_i
             @deal=[]
-            3.times{@deal<<@tarotdeck.pop}
+            deals.times{@deal<<@tarotdeck.pop}
             @deal.each do |dealt|
             dealt.inverted= dorandom
             if dealt.inverted== "Inverted"
