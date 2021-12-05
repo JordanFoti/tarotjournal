@@ -6,7 +6,6 @@ require 'rmagick'
 require 'sinatra/base'
 enable :sessions
 include FileUtils::Verbose
-use Rack::MethodOverride
 tarot= TarotDeck.new
 store= JournalStore.new
 
