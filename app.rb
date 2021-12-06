@@ -105,7 +105,6 @@ store= JournalStore.new
         id= params['id'].to_i
         @entry= store.find(id)
         erb :show 
-        end
     end
 
     post('/edit/:id') do
