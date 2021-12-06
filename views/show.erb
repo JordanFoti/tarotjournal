@@ -11,44 +11,32 @@
     <input type="Submit" name="_method" value="Delete">
     </form></td>
     </table>
-    <% if@entry.image %>
-        <img src="/images/uploaded/<%=@entry.image %>" class="a"/>
-    <% end %>
-    <% if @entry.tarot %>
+        <% if @entry.image %>
+            <img src="/images/uploaded/<%= @entry.image %>" class="a"/>
+        <% end %>
+        <% if @entry.tarot %>
             <center>
             <table class="a">
             <tr>
+            <% @entry.tarot.each do |card|%>
             <td>
-            <center><button class="button" onclick="location.href='/view/<%=@entry.tarot[0]%>,<%=@entry.id%>'" type=button><img src="/images/<%=@entry.tarot[0]%>.jpg"></button></center>
+            <center><button class="button" onclick="location.href='/view/<%= card%>,<%= @entry.id%>'" type=button><img src="/images/<%= card%>.jpg"></button></center>
             </td>
-            <td>
-            <center><button class="button" onclick="location.href='/view/<%=@entry.tarot[1]%>,<%=@entry.id%>'" type=button><img src="/images/<%=@entry.tarot[1]%>.jpg"></button></center>
-            </td>
-            <td>
-            <center><button class="button" onclick="location.href='/view/<%=@entry.tarot[2]%>,<%=@entry.id%>'" type=button><img src="/images/<%=@entry.tarot[2]%>.jpg"></button></center>
-            </td>
+            <% end %>
             </tr>
             <tr>
+            <% @entry.tarotlog.each do |meaning|%>
             <td>
             <center>
-            <%=@entry.tarotlog[0]%>
+            <%= meaning%>
             </center>
             </td>
-            <td>
-            <center>
-            <%=@entry.tarotlog[1]%>
-            </center>
-            </td>            
-            <td>
-            <center>
-            <%=@entry.tarotlog[2]%>
-            </center>
-            </td>
+            <% end%>
             </tr>
             </table>
             </center>
-    <% end %>
-            <article><%=@entry.log%></article>
+            <% end %>
+            <article><%= @entry.log %></article>
             </blockquote>
             <center>
 <button class="button" onclick="location.href='/journal#<%= @entry.id%>'" type=button>Return to Journal</button>
