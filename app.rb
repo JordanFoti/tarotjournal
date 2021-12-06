@@ -139,7 +139,7 @@ store= JournalStore.new
     delete('/journal/:id') do
         id= params['id'].to_i
         store.delete(id)
-        redirect '/journal'
+        redirect '/'
     end
 
     post('/upload') do
@@ -176,7 +176,7 @@ store= JournalStore.new
         @entry= store.find(id)
         @entry.log= params['log']
         store.save(@entry)
-        redirect "/journal##{@entry.id}"
+        redirect "/##{@entry.id}"
     end
 
     def get_youtube_id(url)
