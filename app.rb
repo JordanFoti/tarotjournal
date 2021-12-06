@@ -124,7 +124,7 @@ store= JournalStore.new
         end
         checkvideo= params['log']
         if checkvideo.include?("/watch?v=")
-            embed= get_youtube_id(@checkvideo)
+            embed= get_youtube_id(checkvideo)
             @entry.log= "<object data='https://www.youtube.com/embed/#{embed}' width='800px' height='600px'></object>"
         else
             @entry.log= checkvideo
@@ -159,7 +159,7 @@ store= JournalStore.new
         @entry.date= time.strftime("%A, %B %d %Y - %I:%M%p")
         checkvideo= params['log']
         if checkvideo.include?("/watch?v=")
-            embed= get_youtube_id(@checkvideo)
+            embed= get_youtube_id(checkvideo)
             @entry.log= "<object data='https://www.youtube.com/embed/#{embed}' width='800px' height='600px'></object>"
         else
             @entry.log= checkvideo
