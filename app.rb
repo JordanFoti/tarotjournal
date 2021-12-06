@@ -104,7 +104,8 @@ store= JournalStore.new
     get('/journal/:id') do
         id= params['id'].to_i
         @entry= store.find(id)
-        erb :show
+        erb :show 
+        end
     end
 
     post('/edit/:id') do

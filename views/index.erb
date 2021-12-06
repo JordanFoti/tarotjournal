@@ -9,43 +9,44 @@
         <% @journal = @journal.reverse %>
         <%= @message %>
         <% @journal.each do |entry| %>
+            <% @entry = entry%>
             <table>
             <tr>
             <td>
-            <h2 id=<%= entry.id%>><a href="/journal/<%= entry.id %>"><%= entry.date %></a></h2>
+            <h2 id=<%= @entry.id%>><a href="/journal/<%= @entry.id %>"><%= @entry.date %></a></h2>
             </td>
-            <td><button class="button" onclick="location.href='/edit/<%= entry.id %>'" type=button>Edit</button></td>
+            <td><button class="button" onclick="location.href='/edit/<%= @entry.id %>'" type=button>Edit</button></td>
             <td>
-            <form onsubmit="return confirm('Are you sure you want to delete the following entry?')" action='/journal/<%= entry.id %>' method="POST">
+            <form onsubmit="return confirm('Are you sure you want to delete the following entry?')" action='/journal/<%= @entry.id %>' method="POST">
             <input type="Submit" name="_method" value="Delete">
             </form></td>
             </table>
-            <% if entry.image %>
-            <img src="/images/uploaded/<%= entry.image %>" class="a"/>
+            <% if @entry.image %>
+                <img src="/images/uploaded/<%= @entry.image %>" class="a"/>
             <% end %>
-            <% if entry.tarot %>
-            <center>
-            <table class="a">
-            <tr>
-            <% entry.tarot.each do |card|%>
-            <td>
-            <center><button class="button" onclick="location.href='/view/<%= card%>,<%= entry.id%>'" type=button><img src="/images/<%= card%>.jpg"></button></center>
-            </td>
+            <% if @entry.tarot %>
+                <center>
+                <table class="a">
+                <tr>
+                <% @entry.tarot.each do |card|%>
+                    <td>
+                    <center><button class="button" onclick="location.href='/view/<%= card%>,<%= @entry.id%>'" type=button><img src="/images/<%= card%>.jpg"></button></center>
+                    </td>
+                <% end %>
+                </tr>
+                <tr>
+                <% @entry.tarotlog.each do |meaning|%>
+                    <td>
+                    <center>
+                    <%= meaning%>
+                    </center>
+                    </td>
+                <% end%>
+                </tr>
+                </table>
             <% end %>
-            </tr>
-            <tr>
-            <% entry.tarotlog.each do |meaning|%>
-            <td>
-            <center>
-            <%= meaning%>
-            </center>
-            </td>
-            <% end%>
-            </tr>
-            </table>
-            </center>
-            <% end %>
-            <article><%= entry.log %></article>
+                </center>
+                <article><%= @entry.log %></article>
         <% end %>
         </blockquote>
         <table border=0>

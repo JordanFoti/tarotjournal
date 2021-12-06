@@ -11,33 +11,33 @@
     <input type="Submit" name="_method" value="Delete">
     </form></td>
     </table>
-        <% if @entry.image %>
-            <img src="/images/uploaded/<%= @entry.image %>" class="a"/>
-        <% end %>
-        <% if @entry.tarot %>
-            <center>
-            <table class="a">
-            <tr>
-            <% @entry.tarot.each do |card|%>
-            <td>
-            <center><button class="button" onclick="location.href='/view/<%= card%>,<%= @entry.id%>'" type=button><img src="/images/<%= card%>.jpg"></button></center>
-            </td>
-            <% end %>
-            </tr>
-            <tr>
-            <% @entry.tarotlog.each do |meaning|%>
-            <td>
-            <center>
-            <%= meaning%>
-            </center>
-            </td>
-            <% end%>
-            </tr>
-            </table>
-            </center>
-            <% end %>
-            <article><%= @entry.log %></article>
-            </blockquote>
-            <center>
+   <% if @entry.image %>
+    <img src="/images/uploaded/<%= @entry.image %>" class="a"/>
+<% end %>
+<% if @entry.tarot %>
+    <center>
+    <table class="a">
+    <tr>
+    <% @entry.tarot.each do |card|%>
+        <td>
+        <center><button class="button" onclick="location.href='/view/<%= card%>,<%= @entry.id%>'" type=button><img src="/images/<%= card%>.jpg"></button></center>
+        </td>
+    <% end %>
+    </tr>
+    <tr>
+    <% @entry.tarotlog.each do |meaning|%>
+        <td>
+        <center>
+        <%= meaning%>
+        </center>
+        </td>
+        <% end%>
+    </tr>
+    </table>
+    </center>
+<% end %>
+<article><%= @entry.log %></article>
+</blockquote>
+<center>
 <button class="button" onclick="location.href='/journal#<%= @entry.id%>'" type=button>Return to Journal</button>
 </center>
