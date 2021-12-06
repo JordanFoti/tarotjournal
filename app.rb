@@ -11,6 +11,10 @@ store= JournalStore.new
 
     get('/tarot/:count') do
         time= Time.new
+        lockout= tarot.check
+        if lockout.date == time.strftime("%a %b %d")
+            redirect '/'
+        end
         @datecheck= DateCheck.new
         @entry= Entry.new
         @tarotdeck= tarot.all
@@ -40,17 +44,13 @@ store= JournalStore.new
     end
 
     get('/choose') do
-        @datecheck= DateCheck.new
-        @datecheck= tarot.check
+        lockout= tarot.check
         time= Time.new
-        if @datecheck.date == time.strftime("%a %b %d")
-            @journal= store.all
-            erb :index
-        else
-            erb :choose, :layout => :tarotbg
+        if lockout.date == time.strftime("%a %b %d")
+            redirect '/'
         end
+            erb :choose, :layout => :tarotbg
     end
-
 
     get '/images/:file' do
         send_file('public/images/uploaded/'+params[:file], :disposition => 'inline')
