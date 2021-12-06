@@ -15,19 +15,19 @@ store= JournalStore.new
         if lockout.date == time.strftime("%a %b %d")
             redirect '/'
         end
-        @datecheck= DateCheck.new
+        datecheck= DateCheck.new
         @entry= Entry.new
-        @tarotdeck= tarot.all
-        @tarotdeck.pop
-        @tarotdeck= @tarotdeck.shuffle
+        tarotdeck= tarot.all
+        tarotdeck.pop
+        tarotdeck= tarotdeck.shuffle
         @entry.date= time.strftime("%A, %B %d %Y - %I:%M%p")
         store.getid(@entry)
         @entry.tarot=[]
         @entry.tarotlog= []
         deals= params['count'].to_i
-        @deal=[]
-        deals.times{@deal<<@tarotdeck.pop}
-        @deal.each do |dealt|
+        deal=[]
+        deals.times{deal<<tarotdeck.pop}
+        deal.each do |dealt|
             dealt.inverted= dorandom
             if dealt.inverted== "Inverted"
                 @entry.tarotlog+= ["<div class='tooltip'>#{dealt.title} Inverted<span class='tooltiptext'>#{dealt.inverted_meaning}</span></div>"]
@@ -38,8 +38,8 @@ store= JournalStore.new
             @entry.tarot+= ["#{dealt.id}#{dealt.inverted}"]
         end
         store.save(@entry)    
-        @datecheck.date = time.strftime("%a %b %d")
-        tarot.save(@datecheck)
+        datecheck.date = time.strftime("%a %b %d")
+        tarot.save(datecheck)
         erb :tarot, :layout => :tarotbg
     end
 
@@ -124,12 +124,12 @@ store= JournalStore.new
             else
             end
         end
-        @checkvideo= params['log']
-        if @checkvideo.include?("/watch?v=")
+        checkvideo= params['log']
+        if checkvideo.include?("/watch?v=")
             embed= get_youtube_id(@checkvideo)
             @entry.log= "<object data='https://www.youtube.com/embed/#{embed}' width='800px' height='600px'></object>"
         else
-            @entry.log= @checkvideo
+            @entry.log= checkvideo
         end
         store.save(@entry)
         session[:id] = @entry.id
@@ -159,12 +159,12 @@ store= JournalStore.new
         end
         time= Time.new
         @entry.date= time.strftime("%A, %B %d %Y - %I:%M%p")
-        @checkvideo= params['log']
-        if @checkvideo.include?("/watch?v=")
+        checkvideo= params['log']
+        if checkvideo.include?("/watch?v=")
             embed= get_youtube_id(@checkvideo)
             @entry.log= "<object data='https://www.youtube.com/embed/#{embed}' width='800px' height='600px'></object>"
         else
-            @entry.log= @checkvideo
+            @entry.log= checkvideo
         end
         store.save(@entry)
         redirect '/refresh'
