@@ -61,7 +61,7 @@ store= JournalStore.new
         ref= params['ref'].to_i
         @tarotcard= tarot.find(id)
         @id= ref
-        erb :view, :layout => :post
+        erb :view, :layout => :border
     end
 
 
@@ -74,14 +74,12 @@ store= JournalStore.new
         end
     end
 
-    get('/journal') do
-        @journal= store.all
-        erb :index
-    end
-
     get('/') do
         @journal= store.all
-        erb :index
+        erb :index do
+            @entry= session.delete(:entry)
+            erb :entry
+        end
     end
 
 
@@ -91,7 +89,6 @@ store= JournalStore.new
 
     get ('/edit/:id') do
         id= params['id'].to_i
-        @entry= Entry.new
         @entry= store.find(id)
         erb :edit
     end
@@ -104,7 +101,10 @@ store= JournalStore.new
     get('/journal/:id') do
         id= params['id'].to_i
         @entry= store.find(id)
-        erb :show 
+        erb :show do
+            @entry= session.delete(:entry)
+            erb :entry
+        end
     end
 
     post('/edit/:id') do
