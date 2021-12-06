@@ -77,7 +77,6 @@ store= JournalStore.new
     get('/') do
         @journal= store.all
         erb :index do
-            @entry= session.delete(:entry)
             erb :entry
         end
     end
@@ -102,7 +101,6 @@ store= JournalStore.new
         id= params['id'].to_i
         @entry= store.find(id)
         erb :show do
-            @entry= session.delete(:entry)
             erb :entry
         end
     end

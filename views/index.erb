@@ -8,7 +8,7 @@
         <blockquote>
         <% @journal = @journal.reverse %>
         <% @journal.each do |entry| %>
-        <% session[:entry]= entry%>
+        <% @entry= entry %>
             <%= yield %>
         <% end %>
         </blockquote>
