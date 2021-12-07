@@ -21,8 +21,8 @@ get('/tarot/:count') do
     store.getid(@entry)
     @entry.tarot = []
     @entry.tarotlog = []
-    deals = params['count'].to_i
     deal = []
+    deals = params['count'].to_i
     deals.times{deal << tarotdeck.pop}
     deal.each do |dealt|
         if rand(2) == 1 
@@ -30,7 +30,9 @@ get('/tarot/:count') do
             @entry.tarotlog += ["<div class='tooltip'>#{dealt.title} Inverted<span class='tooltiptext'>#{dealt.inverted_meaning}</span></div>"]
             tarot.invert(dealt.id, dealt.inverted)
         else
+            dealt.inverted = nil
             @entry.tarotlog += ["<div class='tooltip'>#{dealt.title}<span class='tooltiptext'>#{dealt.meaning}</span></div>"]
+            tarot.invert(dealt.id, dealt.inverted)
         end
         @entry.tarot += ["#{dealt.id}#{dealt.inverted}"]
     end
@@ -97,12 +99,11 @@ post('/edit/:id') do
     if params[:file]
         fileupload
     end
-    checkvideo = params['log']
-    if checkvideo.include?("/watch?v=")
-        embed = get_youtube_id(checkvideo)
+    if params['log'].include?("/watch?v=")
+        embed = get_youtube_id(params['log'])
         @entry.log = "<object data='https://www.youtube.com/embed/#{embed}' width='800px' height='600px'></object>"
     else
-        @entry.log = checkvideo
+        @entry.log = params['log']
     end
     store.save(@entry)
     redirect '/refresh'
@@ -121,12 +122,11 @@ post('/upload') do
     if params[:file]
         fileupload
     end
-    checkvideo = params['log']
-    if checkvideo.include?("/watch?v=")
-        embed = get_youtube_id(checkvideo)
+    if params['log'].include?("/watch?v=")
+        embed = get_youtube_id(params['log'])
         @entry.log = "<object data='https://www.youtube.com/embed/#{embed}' width='800px' height='600px'></object>"
     else
-        @entry.log = checkvideo
+        @entry.log = params['log']
     end
     store.save(@entry)
     redirect '/refresh'
@@ -165,5 +165,4 @@ def fileupload
         img.resize(800,600).write("public/images/uploaded/#{filename}")
     else
     end
-    
 end
