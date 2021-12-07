@@ -4,6 +4,10 @@ end
 
 class DateCheck
     attr_accessor :date
+    def initialize
+        time = Time.new
+        self.date = time.strftime("%a %b %d")
+    end
 end
 
 class Entry
