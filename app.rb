@@ -5,8 +5,8 @@ require 'models'
 require 'my_app'
 enable :sessions
 include FileUtils::Verbose
-tarot= TarotDeck.new
-store= JournalStore.new
+tarot = TarotDeck.new
+store = JournalStore.new
 
 get('/tarot/:count') do
     lockout = tarot.check
@@ -96,49 +96,33 @@ post('/edit/:id') do
     id = params['id'].to_i
     @entry = store.find(id)
     session[:id]= id
-    if params[:file]
-        fileupload
-    end
-    if params['log'].include?("/watch?v=")
-        embed = get_youtube_id(params['log'])
-        @entry.log = "<object data='https://www.youtube.com/embed/#{embed}' width='800px' height='600px'></object>"
-    else
-        @entry.log = params['log']
-    end
+    checkparams
     store.save(@entry)
     redirect '/refresh'
-end
-
-delete('/journal/:id') do
-    id = params['id'].to_i
-    store.delete(id)
-    redirect '/'
 end
 
 post('/upload') do
     @entry = Entry.new
     time = Time.new
     @entry.date = time.strftime("%A, %B %d %Y - %I:%M%p")
-    if params[:file]
-        fileupload
-    end
-    if params['log'].include?("/watch?v=")
-        embed = get_youtube_id(params['log'])
-        @entry.log = "<object data='https://www.youtube.com/embed/#{embed}' width='800px' height='600px'></object>"
-    else
-        @entry.log = params['log']
-    end
+    checkparams
     store.save(@entry)
     redirect '/refresh'
 end
 
 post('/tarot/comment/:id') do
     @entry = Entry.new
-    id= params['id'].to_i
+    id = params['id'].to_i
     @entry = store.find(id)
     @entry.log = params['log']
     store.save(@entry)
     redirect "/##{@entry.id}"
+end
+
+delete('/journal/:id') do
+    id = params['id'].to_i
+    store.delete(id)
+    redirect '/'
 end
 
 def get_youtube_id(url)
@@ -164,5 +148,17 @@ def fileupload
     elsif img.columns > img.rows && img.rows > 600
         img.resize(800,600).write("public/images/uploaded/#{filename}")
     else
+    end
+end
+
+def checkparams
+    if params[:file]
+        fileupload
+    end
+    if params['log'].include?("/watch?v=")
+        embed = get_youtube_id(params['log'])
+        @entry.log = "<object data='https://www.youtube.com/embed/#{embed}' width='800px' height='600px'></object>"
+    else
+        @entry.log = params['log']
     end
 end
