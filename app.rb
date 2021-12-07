@@ -137,23 +137,19 @@ def get_youtube_id(url)
     id
 end
 
-def fileupload
-    filename = params[:file][:filename]
-    tempfile = params[:file][:tempfile]
-    cp(tempfile.path, "public/images/uploaded/#{filename}")
-    @entry.image = "#{filename}"
-    img = Magick::Image::read("public/images/uploaded/#{filename}")[0]
-    if img.columns < img.rows && img.columns > 600
-        img.resize(600,800).write("public/images/uploaded/#{filename}")
-    elsif img.columns > img.rows && img.rows > 600
-        img.resize(800,600).write("public/images/uploaded/#{filename}")
-    else
-    end
-end
-
 def checkparams
     if params[:file]
-        fileupload
+        filename = params[:file][:filename]
+        tempfile = params[:file][:tempfile]
+        cp(tempfile.path, "public/images/uploaded/#{filename}")
+        @entry.image = "#{filename}"
+        img = Magick::Image::read("public/images/uploaded/#{filename}")[0]
+        if img.columns < img.rows && img.columns > 600
+            img.resize(600,800).write("public/images/uploaded/#{filename}")
+        elsif img.columns > img.rows && img.rows > 600
+            img.resize(800,600).write("public/images/uploaded/#{filename}")
+        else
+        end
     end
     if params['log'].include?("/watch?v=")
         embed = get_youtube_id(params['log'])
