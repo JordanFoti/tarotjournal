@@ -8,7 +8,7 @@ include FileUtils::Verbose
 tarot = TarotDeck.new
 store = JournalStore.new
 
-get('/tarot/:count') do
+get('/tarot') do
     lockout = tarot.check
     time = Time.new
     redirect '/' if lockout.date == time.strftime("%a %b %d")
@@ -21,10 +21,7 @@ get('/tarot/:count') do
     store.getid(@entry)
     @entry.tarot = []
     @entry.tarotlog = []
-    deal = []
-    deals = params['count'].to_i
-    deals.times{deal << tarotdeck.pop}
-    deal.each do |dealt|
+    tarotdeck.each do |dealt|
         if rand(2) == 1 
             dealt.inverted = "Inverted"
             @entry.tarotlog += ["<div class='tooltip'>#{dealt.title} Inverted<span class='tooltiptext'>#{dealt.inverted_meaning}</span></div>"]
@@ -36,9 +33,47 @@ get('/tarot/:count') do
         end
         @entry.tarot += ["#{dealt.id}#{dealt.inverted}"]
     end
-    store.save(@entry)    
-    tarot.save(datecheck)
+    store.save(@entry)
+    session.delete(:chosen)
     erb :tarot, :layout => :tarotbg
+end
+
+get('/tarot/:ref,:id') do
+    entry = params['ref'].to_i
+    id = params['id'].to_i
+    @entry = store.find(entry)
+    if session[:chosen] 
+        session[:chosen] += [@entry.tarot.slice(id)]
+        session[:log] += [@entry.tarotlog.slice(id)]
+    else
+        session[:chosen] = []
+        session[:log] = []
+        session[:chosen] += [@entry.tarot.slice(id)]
+        session[:log] += [@entry.tarotlog.slice(id)]
+    end
+    @chosen = session.delete(:chosen)
+    @log = session.delete(:log)
+    if @chosen.count == session[:cards]
+        datecheck = DateCheck.new
+        @entry.tarot = @chosen
+        @entry.tarotlog = @log
+        store.save(@entry)
+        tarot.save(datecheck)
+        session[:id]= @entry.id
+        redirect 'tarot/thoughts'
+    end
+    @entry.tarot.delete_at(id)
+    @entry.tarotlog.delete_at(id)
+    store.save(@entry)
+    session[:chosen] = @chosen
+    session[:log] = @log
+    erb :tarot2, :layout => :tarotbg
+end
+
+get '/tarot/thoughts' do
+    @id = session.delete(:id)
+    @entry= store.find(@id)
+    erb :tarot3, :layout => :tarotbg
 end
 
 get('/choose') do
@@ -47,6 +82,13 @@ get('/choose') do
     redirect '/' if lockout.date == time.strftime("%a %b %d")
     erb :choose, :layout => :tarotbg
 end
+
+get('/choose/:id') do
+    id = params['id'].to_i
+    session[:cards] = id
+    redirect '/tarot'    
+    end
+
 
 get '/images/:file' do
     send_file('public/images/uploaded/'+params[:file], :disposition => 'inline')
@@ -92,7 +134,6 @@ get('/journal/:id') do
 end
 
 post('/edit/:id') do
-    @entry = Entry.new
     id = params['id'].to_i
     @entry = store.find(id)
     session[:id]= id
@@ -111,7 +152,6 @@ post('/upload') do
 end
 
 post('/tarot/comment/:id') do
-    @entry = Entry.new
     id = params['id'].to_i
     @entry = store.find(id)
     @entry.log = params['log']

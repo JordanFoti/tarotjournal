@@ -1,0 +1,27 @@
+    <center>
+    <h1>Tarot Card Dealer</h1>
+    <table class="a">
+    <tr>
+     <% @entry.tarot.each do |card|%>
+        <td>
+        <center><button class="button" onclick="location.href='/view/<%= card%>,<%= @entry.id%>'"><img src="/images/<%= card%>.jpg"></button></center>
+        </td>
+    <% end %>
+    </tr>
+    <tr>
+    <% @entry.tarotlog.each do |meaning|%>
+        <td>
+        <center>
+        <%= meaning%>
+        </center>
+        </td>
+    <% end%>
+        </table>
+
+        <form action='/tarot/comment/<%= @entry.id%>' enctype="multipart/form-data" method='POST'> 
+        <textarea rows=10 cols=80 name="log"></textarea>
+        <br>
+        <input type="Submit" value="Add My Thoughts" />
+        </form>
+        <button class="button" onclick="location.href='/#<%= @entry.id%>'" type=button>Return to Journal</button>
+        </center>
